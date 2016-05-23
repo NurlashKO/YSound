@@ -1,0 +1,24 @@
+{%extends 'sound/base.html' %}
+{% block title %}
+    YSound
+{% endblock%}
+
+{% block content %}
+    <h2>Здравствуй, %username%!</h2>
+    <h3><p>Для меня большая честь приветствовать тебя на этом небольшом проекте.</p></h3>
+    <h3><p>Данное приложение позволяет скачивать песни с Youtube.com по названию.</p></h3>
+
+    <form action="#" method="get">
+        {% csrf_token %}
+    <div class="row">
+  <div class="col-lg-8">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for sound..." name="soundname">
+      <span class="input-group-btn">
+        <input type="submit" value="Download!" class="btn btn-default" name="sdownload">
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+</form>
+{% endblock %}
